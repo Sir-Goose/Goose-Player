@@ -1,5 +1,4 @@
 import asyncio
-import time
 
 import discord
 from discord.ext import commands
@@ -7,6 +6,11 @@ from discord.utils import get
 import yt_dlp
 import re
 import json
+
+
+# Get API key
+with open('api_key.txt', 'r') as f:
+    api_key = f.read()
 
 intents = discord.Intents.default()
 intents.messages = True
@@ -246,4 +250,4 @@ async def leave(ctx):
         await voice_client.disconnect()
 
 
-bot.run('MTE4MTkzMTY3MDA3MzUyODM2MQ.GNIqO4.fyWTFcw0CqC72tVtwkEHKCaOXwhsdg5Ba_CzNU')
+bot.run(api_key)
