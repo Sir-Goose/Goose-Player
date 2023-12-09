@@ -7,7 +7,6 @@ import yt_dlp
 import re
 import json
 
-
 # Get API key
 with open('api_key.txt', 'r') as f:
     api_key = f.read()
@@ -22,13 +21,10 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Keep track of state
 is_playing_or_paused = False
-file_path = 'bowie.mp3'
+file_path = 'bowie.mp3'  # old
 song_queue = []
 skip_queue = []
-skipped = []
-skipped.append(False)
-# Guild ID: Queue
-song_queues = {}
+skipped = [False]
 
 
 @bot.event
