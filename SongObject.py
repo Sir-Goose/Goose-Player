@@ -1,9 +1,10 @@
 # Song object class to store song information
 
 class SongObject:
-    def __init__(self, title, url, duration, thumbnail, requester):
+    def __init__(self, title, url, filename, duration, thumbnail, requester):
         self.title: str = title
         self.url: str = url
+        self.filename: str = filename
         self.duration: str = duration  # format is HH:MM:SS
         self.thumbnail: str = thumbnail
         self.requester: str = requester
